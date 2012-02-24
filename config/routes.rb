@@ -1,5 +1,8 @@
 GLAC::Application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    get 'signin' => 'devise/sessions#new'
+    get 'signout' => 'devise/sessions#destroy'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
