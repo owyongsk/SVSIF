@@ -36,13 +36,13 @@
           <div class="container nav-collapse">
             <% if user_signed_in?  %>
               <p class="navbar-text pull-right">
-                Signed in as
-                <%= link_to "Sign out", logout_path %>
+                Signed in as <%= current_user.email %>
+                <%= link_to "Sign out", signout_path %>
               </p>
             <% else %>
               <p class="navbar-text pull-right">
-                <%= link_to "Sign up", new_user_registration_path %> or
-                <%= link_to "Sign in", new_user_session_path %>
+                <%= link_to "Sign up", signup_path %> or
+                <%= link_to "Sign in", signin_path %>
               </p>
             <% end %>
           </div><!--/.nav-collapse -->

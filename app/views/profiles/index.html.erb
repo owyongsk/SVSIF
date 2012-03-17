@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="span6 offset2">
+    <div class="boxes">
+      <legend><%= @title %></legend>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Profession</th>
+            <th>Entity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @profiles.each do |profiles| %>
+            <tr>
+              <td><%= profiles.name %></td>
+              <td><%= profiles.profession %></td>
+              <td><%= profiles.skills %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
