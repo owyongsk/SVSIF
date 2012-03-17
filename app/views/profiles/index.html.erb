@@ -11,11 +11,11 @@
           </tr>
         </thead>
         <tbody>
-          <% @profiles.each do |profiles| %>
+          <% @profiles.each do |profile| %>
             <tr>
-              <td><%= profiles.name %></td>
-              <td><%= profiles.profession %></td>
-              <td><%= profiles.entity %></td>
+              <td><%= mail_to profile.user.email, profile.name %></td>
+              <td><%= profile.profession %></td>
+              <td><%= profile.entity %></td>
             </tr>
           <% end %>
         </tbody>
