@@ -2,6 +2,7 @@ GLAC::Application.routes.draw do
   devise_for :users do
     get 'signin' => 'devise/sessions#new'
     get 'signout' => 'devise/sessions#destroy'
+    get 'signup' => 'devise/registrations#new'
   end
 
   # The priority is based upon order of creation:
