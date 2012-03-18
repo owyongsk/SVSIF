@@ -5,7 +5,10 @@ GLAC::Application.routes.draw do
     get 'signout' => 'devise/sessions#destroy'
     get 'signup' => 'devise/registrations#new'
   end
+
   resources :profiles
+  resources :projects
+
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:
