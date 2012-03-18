@@ -1,26 +1,26 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: CHANGETHISHERE
+  database: glac_development
   pool: 5
-  username: CHANGETHISHERE
-  password: CHANGETHISHERE
+  username: glac
+  password: devtest
   host: localhost
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: CHANGETHISHERE
+  database: glac_test
   pool: 5
-  username: CHANGETHISHERE
-  password: CHANGETHISHERE
+  username: glac
+  password: devtest
   host: localhost
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: CHANGETHISHERE
+  database: glac_production
   pool: 5
-  username: CHANGETHISHERE
-  password: CHANGETHISHERE
+  username: glac
+  password: devtest
   host: localhost
