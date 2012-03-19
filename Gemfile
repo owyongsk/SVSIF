@@ -23,6 +23,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem "foreman"
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "capybara"
