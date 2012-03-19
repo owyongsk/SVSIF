@@ -5,11 +5,9 @@
         <legend><%= @title %></legend>
         <br />
         <dl class="dl-horizontal">
-          <dt>Project Champion</dt>
+          <dt>Champion</dt>
           <dd>
             <%= @project.profiles.first.name %>
-            <%= mail_to @project.profiles.first.user.email, "Send Email",
-                        :class => "btn btn-mini btn-info" %>
           </dd>
           <br />
           <dt>Description</dt>
@@ -19,6 +17,12 @@
           <dd><%= @project.need %></dd>
         </dl>
       </fieldset>
+      <% unless current_user.profile == @project.profiles.first %>
+        <div class="buttons">
+          <%= mail_to @project.profiles.first.user.email, "Send Email",
+                      :class => "btn btn-info btn-project" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
