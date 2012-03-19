@@ -7,26 +7,39 @@ body { padding-top: 60px; }
 @iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
-
+// Overrides for variables
 @baseFontSize: 14px;
+
+// Media queries
+/*@media (max-width: 480px) {*/
+	/*.form-horizontal .control-group > label {*/
+		/*float: none;*/
+		/*width: auto;*/
+		/*padding-top: 0;*/
+		/*text-align: left;*/
+	/*}*/
+	/*// Move over all input controls and content*/
+	/*.form-horizontal .controls {*/
+		/*margin-left: 0;*/
+	/*}*/
+	/*// Move the options list down to align with labels*/
+	/*.form-horizontal .control-list {*/
+		/*padding-top: 0; // has to be padding because margin collaspes*/
+	/*}*/
+	/*// Move over buttons in .form-actions to align with .controls*/
+	/*.form-horizontal .form-actions {*/
+		/*padding-left: 10px;*/
+		/*padding-right: 10px;*/
+	/*}*/
+/*}*/
+// Custom
+.well {
+	margin-top: 10px;
+}
 
 body {
 	background-color: @blue;
 }
-
-/*.boxes * .span6, .boxes > .span6 {*/
-	/*float: none;*/
-/*}*/
 
 .boxes > fieldset, .boxes * fieldset {
 	padding: 20px;
@@ -34,22 +47,6 @@ body {
 
 .boxes > .buttons {
 	text-align: right;
-}
-
-.span6 > legend {
-	width: 490px;
-}
-
-.span8 > legend {
-	width: 750px;
-}
-
-.span6 > .form-actions {
-	width: 310px;
-}
-
-.span10 > legend {
-	width: 890px
 }
 
 .boxed {

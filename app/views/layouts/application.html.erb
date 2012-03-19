@@ -12,12 +12,6 @@
 
     <!-- Le styles -->
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.1/bootstrap.min.js" %>
 
@@ -54,10 +48,15 @@
     <div class="container">
         <div class="content">
           <div class="row">
-            <div class="span6 offset3">
+            <% if user_signed_in?  %>
+              <%= render 'layouts/sidebar' %>
+              <div class="span6">
+            <% else %>
+              <div class="span6 offset3">
+            <% end %>
             <% [:notice, :error, :alert].each do |level| %>
             <% unless flash[level].blank? %>
-             <div data-alert="alert" class="alert alert-<%= flash_class(level) %> fade in">
+              <div data-alert="alert" class="alert alert-<%= flash_class(level) %> fade in">
                 <a class="close" data-dismiss="alert" href="#">&times;</a>
                 <%= content_tag :p, flash[level] %>
               </div>
