@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="span6 offset2">
+    <div class="boxes">
+      <fieldset class="span6">
+        <legend><%= @title %></legend>
+        <br />
+        <dl class="dl-horizontal">
+          <dt>Project Champion</dt>
+          <dd>
+            <%= @project.profiles.first.name %>
+            <%= mail_to @project.profiles.first.user.email, "Send Email",
+                        :class => "btn btn-mini btn-info" %>
+          </dd>
+          <br />
+          <dt>Description</dt>
+          <dd><%= @project.desc %></dd>
+          <br />
+          <dt>What we need</dt>
+          <dd><%= @project.need %></dd>
+        </dl>
+      </fieldset>
+    </div>
+  </div>
+</div>

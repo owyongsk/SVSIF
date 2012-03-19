@@ -31,17 +31,17 @@ ActiveRecord::Schema.define(:version => 20120318225703) do
     t.string   "name"
   end
 
+  create_table "profiles_projects", :id => false, :force => true do |t|
+    t.integer "profile_id"
+    t.integer "project_id"
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.text     "desc"
     t.text     "need"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "projects_profiles", :id => false, :force => true do |t|
-    t.integer "project_id"
-    t.integer "profile_id"
   end
 
   create_table "users", :force => true do |t|

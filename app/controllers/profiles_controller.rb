@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
 
   def index
-    @title = "All profiles"
+    @title = "All Users"
     @profiles = Profile.page(params[:page]).per(20)
   end
 
