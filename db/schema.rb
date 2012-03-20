@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120318225703) do
+ActiveRecord::Schema.define(:version => 20120320043926) do
 
   create_table "messages", :force => true do |t|
     t.integer  "to"
@@ -29,11 +29,7 @@ ActiveRecord::Schema.define(:version => 20120318225703) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "name"
-  end
-
-  create_table "profiles_projects", :id => false, :force => true do |t|
-    t.integer "profile_id"
-    t.integer "project_id"
+    t.string   "orgtype"
   end
 
   create_table "projects", :force => true do |t|
@@ -42,6 +38,14 @@ ActiveRecord::Schema.define(:version => 20120318225703) do
     t.text     "need"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "relations", :force => true do |t|
+    t.integer  "profile_id"
+    t.integer  "project_id"
+    t.string   "relationship"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

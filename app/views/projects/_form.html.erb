@@ -13,6 +13,7 @@
 
         <fieldset>
           <legend><%= @title %></legend>
+          <%= f.hidden_field :relationship => "champion" %>
           <div class="control-group">
             <%= f.label "Name", :class => "control-label" %>
             <div class="controls"><%= f.text_field :title %></div>
