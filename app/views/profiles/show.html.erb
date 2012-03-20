@@ -20,16 +20,16 @@
           </dd>
           <br />
           <dt>Organization</dt>
-          <dd><%= @profile.orgtype %></dd>
+          <dd><%= @profile.entity %></dd>
           <br />
           <dt>Entity</dt>
-          <dd><%= @profile.entity %></dd>
+          <dd><%= @profile.orgtype %></dd>
           <br />
           <dt>Skills</dt>
           <dd><%= @profile.skills %></dd>
           <br />
           <% unless @profile.projects.blank? %>
-            <dt>Supports and Champions</dt>
+            <dt>Supports or Champions</dt>
             <% @profile.projects.each do |p| %>
               <dd><%= link_to p.title, p %></dd>
             <% end %>
