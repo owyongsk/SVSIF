@@ -66,5 +66,5 @@ GLAC::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   # # Host variable
-  config.action_mailer.default_url_options = { :host => "something.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "www.svsin.org" }
 end
