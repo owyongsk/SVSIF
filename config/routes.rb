@@ -8,6 +8,7 @@ GLAC::Application.routes.draw do
 
   resources :profiles
   resources :projects
+  resources :relations
 
   root :to => 'pages#home'
 

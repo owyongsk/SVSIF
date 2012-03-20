@@ -13,8 +13,7 @@
           <% @projects.each do |project| %>
             <tr>
               <td><%= link_to project.title, project %></td>
-              <td><%= mail_to project.profiles.first.user.email, 
-                              project.profiles.first.name %></td>
+              <td><%= project.profiles.first.name %></td>
             </tr>
           <% end %>
         </tbody>

@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :profile_init, :only => [:edit, :update]
+  before_filter :profile_init, :only => [:edit, :update, :show]
   before_filter :correct_user, :only => [:edit, :update]
 
   def index
@@ -20,6 +20,10 @@ class ProfilesController < ApplicationController
       @title = "Edit user"
       render 'edit'
     end
+  end
+
+  def show
+    @title = @profile.name
   end
 
   private

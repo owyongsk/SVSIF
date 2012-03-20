@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.profile.projects.create(params[:project])
     if @project
+      @project.relations.first.relationship = "Champion"
       flash[:success] = "Project was successfully created."
       redirect_to (@project)
     else
@@ -25,5 +26,8 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @title = @project.title
+    @relation = Relation.where(:profile_id => current_user.profile.id, 
+                               :project_id => @project.id).first
+    @new_relation = Relation.new if @relation.blank?
   end
 end

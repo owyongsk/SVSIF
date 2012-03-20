@@ -19,6 +19,16 @@
           </div>
           <div class="control-group">
             <%= f.label "Organization", :class => "control-label" %>
+            <div class="controls">
+              <%= f.select :orgtype, { "Government" => "Government",
+                                           "University" => "University", 
+                                           "Non-profit" => "Non-profit",
+                                           "Private" => "Private",
+                                           "Other" => "Other" } %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label "Entity", :class => "control-label" %>
             <div class="controls"><%= f.text_field :entity %></div>
           </div>
           <div class="control-group">
